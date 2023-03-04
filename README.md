@@ -76,12 +76,12 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-   Note left of user: start
-   Note over HTPCswitch: onState
-   user->>HTPCswitch: toggle off
-   Note over HTPCswitch: offState
-   Note over suspendHTPCswitch: offState
-   HTPCswitch->>suspendHTPCswitch: toggle on
+   Note left of Camera-On: start
+   Note over RPi-Server: offState
+   Camera-On->>RPi-Server: Motion Detected
+   Note over RPi-Server: onState
+   Note over Tensorflow: offState
+   RPi-Server->>Tensorflow: Process live-feed against predefined list
 ```
 
 
