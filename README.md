@@ -37,6 +37,18 @@ graph TD;
 
 # Sequence Diagram
 
+
+```mermaid
+sequenceDiagram
+   Note left of Camera-On: start
+   Note over RPi-Server: offState
+   Camera-On->>RPi-Server: Motion Detected
+   Note over RPi-Server: onState
+   Note over Tensorflow: offState
+   RPi-Server->>Tensorflow: Process live-feed against predefined list
+```
+
+
 ```mermaid
 sequenceDiagram
    Note left of user: start
@@ -71,17 +83,3 @@ sequenceDiagram
 
 
 ```
-
-
-
-```mermaid
-sequenceDiagram
-   Note left of Camera-On: start
-   Note over RPi-Server: offState
-   Camera-On->>RPi-Server: Motion Detected
-   Note over RPi-Server: onState
-   Note over Tensorflow: offState
-   RPi-Server->>Tensorflow: Process live-feed against predefined list
-```
-
-
